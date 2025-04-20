@@ -1,0 +1,31 @@
+{
+  "header": {
+    "ahbor": "News",
+    "tamos": "Contact us",
+    "name_iit": "Scientific Research Institute",
+    "tnu": "Tajik National University",
+    "nav_asos": "HOME",
+    "nav_about": "ABOUT US",
+    "nav_tarikh": "History of IIT",
+    "nav_direcs": "Directors of IIT",
+    "nav_sokhtor": "Structure",
+    "nav_dir": "Director",
+    "nav_mu_dir": "Deputy Director",
+    "nav_suro": "Scientific Council",
+    "nav_rohbar": "LEADERSHIP",
+    "nav_ilm": "SCIENCE",
+    "nav_suba": "DEPARTMENTS",
+    "nav_omuz": "LABORATORIES",
+    "nav_ahbor": "NEWS"
+  },
+  "home": {
+    "slider1": "TNU PROFESSORS WON 3 MEDALS AT THE MIDDLE EAST INVENTORS FORUM",
+    "news": "NEWS",
+    "title_news": "GRAND CELEBRATION OF THE ARMED FORCES DAY AT TNU",
+    "text_news": "Today (21.02.2025), a scientific and cultural event was held at the Tajik National University in honor of the 32nd anniversary of the establishment of the Armed Forces of the Republic of Tajikistan."
+  },
+  "footer": {
+    "o_nas": "About us",
+    "desc": "Tajik National University is the first and one of the largest universities in Tajikistan, and a major center for culture, education, and science. Founded in 1948, it is located in the capital city, Dushanbe. The rector is Professor Nasriddinzoda E. S."
+  }
+}
