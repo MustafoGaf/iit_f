@@ -1,10 +1,10 @@
 export default function Login() {
   return (
-    <div class="login-container">
+    <div className="login-container">
       <h2>Добро пожаловать!</h2>
       <form>
-        <div class="input-group">
-          <label for="email">Электронная почта</label>
+        <div className="input-group">
+          <label htmlFor="email">Электронная почта</label>
           <input
             type="email"
             id="email"
@@ -12,8 +12,8 @@ export default function Login() {
             required
           />
         </div>
-        <div class="input-group">
-          <label for="password">Пароль</label>
+        <div className="input-group">
+          <label htmlFor="password">Пароль</label>
           <input
             type="password"
             id="password"
@@ -21,11 +21,11 @@ export default function Login() {
             required
           />
         </div>
-        <button class="btn" type="submit">
+        <button className="btn" type="submit">
           Войти
         </button>
       </form>
-      <div class="footer-text"></div>
+      <div className="footer-text"></div>
     </div>
   );
 }

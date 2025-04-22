@@ -1,8 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useSearchParams } from "react-router";
+import { Link, useSearchParams, useNavigate } from "react-router";
+import useLocalStorage from "../hooks/useLocalstorage";
 export default function Login() {
+  const [token, setToken] = useLocalStorage("auth_token", "");
+  const navigate = useNavigate();
   const [user, setUser] = useState([]);
   const inputsRef = useRef([]);
+  const [rez, setRez] = useState({});
   const [searchParams, setSerachParams] = useSearchParams();
   useEffect(() => {
     inputsRef.current[0]?.focus();
@@ -25,8 +29,9 @@ export default function Login() {
       inputsRef.current[index - 1]?.focus();
     }
   };
-
+  // аутентификация
   const handleSubmit = async (e) => {
+    setRez({});
     if (user.length == 0) {
       setSerachParams({
         code: String(0),
@@ -50,6 +55,10 @@ export default function Login() {
         });
 
         const data = await response.json();
+        if (response.ok) {
+          setToken(data.token);
+          navigate("/admin");
+        }
       } catch (error) {
         console.log(error);
         setSerachParams({
@@ -58,9 +67,10 @@ export default function Login() {
       }
     }
   };
-
+  // регистрация
   const formSubmit = async (e) => {
     e.preventDefault();
+    setRez({});
     try {
       const response = await fetch("http://localhost:3001/login", {
         method: "POST",
@@ -75,7 +85,12 @@ export default function Login() {
 
       const data = await response.json();
       console.log("data = ", data);
-
+      setRez({
+        code: String(data.code) || 0,
+        message: String(data.message) || "",
+        status: String(data.status) || 200,
+      });
+      console.log(rez);
       if (data.code) {
         setSerachParams({
           code: String(data.code),
@@ -91,6 +106,11 @@ export default function Login() {
       console.log(error);
       setSerachParams({
         code: String(0),
+      });
+      setRez({
+        code: String(data.code) || 0,
+        message: String(data.message) || "",
+        status: String(data.status) || 200,
       });
     }
   };
@@ -127,34 +147,37 @@ export default function Login() {
     );
   } else {
     return (
-      <div class="login-container">
+      <div className="login-container">
         <h2>Добро пожаловать!</h2>
         <form onSubmit={(e) => formSubmit(e)}>
-          <div class="input-group">
-            <label for="email">Электронная почта</label>
+          <div className="input-group">
+            <label htmlFor="email">Электронная почта</label>
             <input
               type="email"
               id="email"
               placeholder="example@mail.com"
               name="email"
+              onInput={() => setRez({})}
               required
             />
           </div>
-          <div class="input-group">
-            <label for="password">Пароль</label>
+          <div className="input-group">
+            <label htmlFor="password">Пароль</label>
             <input
               type="password"
               id="password"
               name="password"
               placeholder="Ваш пароль"
+              onInput={() => setRez({})}
               required
             />
           </div>
-          <button class="btn" type="submit">
+          <p className="error_rez">{rez.message}</p>
+          <button className="btn" type="submit">
             Войти
           </button>
         </form>
-        <div class="footer-text"></div>
+        <div className="footer-text"></div>
       </div>
     );
   }

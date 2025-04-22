@@ -6,7 +6,7 @@ function useLocalStorage(key, defaultValue) {
       const value = localStorage.getItem(key);
 
       if (value) {
-        return JSON.parse(value);
+        return value;
       } else {
         localStorage.setItem(key, defaultValue);
         return defaultValue;
@@ -18,7 +18,7 @@ function useLocalStorage(key, defaultValue) {
 
   function setValue(newValue) {
     try {
-      localStorage.setItem(key, JSON.stringify(newValue));
+      localStorage.setItem(key, newValue);
     } catch (error) {
       console.log(error);
     }
