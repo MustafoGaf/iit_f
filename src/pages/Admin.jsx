@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Modal from "../components/Modal";
 import AddNews from "../components/AddNews";
-
+import "../styles/admin.css";
+import AddSlider from "../components/Admin/AddSlider";
 export default function Admin() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [token, setToken] = useLocalStorage("auth_token", "");
@@ -13,115 +14,106 @@ export default function Admin() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    if (!token) return navigate("/login");
+    if (token.length == 0 || !token) return navigate("/login");
   }, [token]);
 
   return (
     <div>
-      <section class="slide">
-        <div class="slider_1">
-          <img src="/img/slider1.jpg" alt="Slider" />
-          <div class="descriptions">
-            <h3>{t("home.slider1")}</h3>
-          </div>
-        </div>
-      </section>
-      <button onClick={() => setModalOpen(true)}>Открыть модалку</button>
       <section id="news">
         <h2>{t("home.news")}</h2>
-        <div class="news-container">
-          <div class="news-card">
+        <div className="news-container">
+          <div className="news-card">
             <a href="">
               <img src="/img/news1.jpg" alt="Новость 1" />
             </a>
-            <div class="news-content">
-              <div class="news-label">{t("header.ahbor")}</div>
-              <div class="news-title">
+            <div className="news-content">
+              <div className="news-label">{t("header.ahbor")}</div>
+              <div className="news-title">
                 <a href="">{t("home.title_news")}</a>
               </div>
-              <div class="news-date">22.02.2025</div>
-              <div class="news-text">{t("home.text_news")}</div>
+              <div className="news-date">22.02.2025</div>
+              <div className="news-text">{t("home.text_news")}</div>
             </div>
           </div>
-          <div class="news-card">
+          <div className="news-card">
             <a href="">
               <img src="/img/news1.jpg" alt="Новость 1" />
             </a>
-            <div class="news-content">
-              <div class="news-label">{t("header.ahbor")}</div>
-              <div class="news-title">
+            <div className="news-content">
+              <div className="news-label">{t("header.ahbor")}</div>
+              <div className="news-title">
                 <a href="">{t("home.title_news")}</a>
               </div>
-              <div class="news-date">22.02.2025</div>
-              <div class="news-text">{t("home.text_news")}</div>
+              <div className="news-date">22.02.2025</div>
+              <div className="news-text">{t("home.text_news")}</div>
             </div>
           </div>
-          <div class="news-card">
+          <div className="news-card">
             <a href="">
               <img src="/img/news1.jpg" alt="Новость 1" />
             </a>
-            <div class="news-content">
-              <div class="news-label">{t("header.ahbor")}</div>
-              <div class="news-title">
+            <div className="news-content">
+              <div className="news-label">{t("header.ahbor")}</div>
+              <div className="news-title">
                 <a href="">{t("home.title_news")}</a>
               </div>
-              <div class="news-date">22.02.2025</div>
-              <div class="news-text">{t("home.text_news")}</div>
+              <div className="news-date">22.02.2025</div>
+              <div className="news-text">{t("home.text_news")}</div>
             </div>
           </div>
-          <div class="news-card">
+          <div className="news-card">
             <a href="">
               <img src="/img/news1.jpg" alt="Новость 1" />
             </a>
-            <div class="news-content">
-              <div class="news-label">{t("header.ahbor")}</div>
-              <div class="news-title">
+            <div className="news-content">
+              <div className="news-label">{t("header.ahbor")}</div>
+              <div className="news-title">
                 <a href="">{t("home.title_news")}</a>
               </div>
-              <div class="news-date">22.02.2025</div>
-              <div class="news-text">{t("home.text_news")}</div>
+              <div className="news-date">22.02.2025</div>
+              <div className="news-text">{t("home.text_news")}</div>
             </div>
           </div>
-          <div class="news-card">
+          <div className="news-card">
             <a href="">
               <img src="/img/news1.jpg" alt="Новость 1" />
             </a>
-            <div class="news-content">
-              <div class="news-label">{t("header.ahbor")}</div>
-              <div class="news-title">
+            <div className="news-content">
+              <div className="news-label">{t("header.ahbor")}</div>
+              <div className="news-title">
                 <a href="">{t("home.title_news")}</a>
               </div>
-              <div class="news-date">22.02.2025</div>
-              <div class="news-text">{t("home.text_news")}</div>
+              <div className="news-date">22.02.2025</div>
+              <div className="news-text">{t("home.text_news")}</div>
             </div>
           </div>
-          <div class="news-card">
+          <div className="news-card">
             <a href="">
               <img src="/img/news1.jpg" alt="Новость 1" />
             </a>
-            <div class="news-content">
-              <div class="news-label">{t("header.ahbor")}</div>
-              <div class="news-title">
+            <div className="news-content">
+              <div className="news-label">{t("header.ahbor")}</div>
+              <div className="news-title">
                 <a href="">{t("home.title_news")}</a>
               </div>
-              <div class="news-date">22.02.2025</div>
-              <div class="news-text">{t("home.text_news")}</div>
+              <div className="news-date">22.02.2025</div>
+              <div className="news-text">{t("home.text_news")}</div>
             </div>
           </div>
-          <div class="news-card">
+          <div className="news-card">
             <a href="">
               <img src="/img/news1.jpg" alt="Новость 1" />
             </a>
-            <div class="news-content">
-              <div class="news-label">{t("header.ahbor")}</div>
-              <div class="news-title">
+            <div className="news-content">
+              <div className="news-label">{t("header.ahbor")}</div>
+              <div className="news-title">
                 <a href="">{t("home.title_news")}</a>
               </div>
-              <div class="news-date">22.02.2025</div>
-              <div class="news-text">{t("home.text_news")}</div>
+              <div className="news-date">22.02.2025</div>
+              <div className="news-text">{t("home.text_news")}</div>
             </div>
           </div>
-          <div class="news-card">
+          <div className="news-card">
             <div className="add_news" onClick={() => setModalOpen(true)}>
               <div>+</div>
               <div>Добавить новости</div>
@@ -129,9 +121,6 @@ export default function Admin() {
           </div>
         </div>
       </section>
-      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-        <AddNews />
-      </Modal>
     </div>
   );
 }

@@ -10,6 +10,9 @@ export default function Login() {
   const [searchParams, setSerachParams] = useSearchParams();
   useEffect(() => {
     inputsRef.current[0]?.focus();
+    return () => {
+      setRez({}), setUser([]);
+    };
   }, []);
 
   useEffect(() => {
@@ -42,7 +45,7 @@ export default function Login() {
       console.log("Code submitted:", code);
       // тут отправка кода на сервер
       try {
-        const response = await fetch("http://localhost:3001/auth", {
+        const response = await fetch("https://apiiit.vercel.app/auth", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -72,7 +75,7 @@ export default function Login() {
     e.preventDefault();
     setRez({});
     try {
-      const response = await fetch("http://localhost:3001/login", {
+      const response = await fetch("https://apiiit.vercel.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

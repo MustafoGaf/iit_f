@@ -8,7 +8,7 @@ export default function AddNews() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3001/addnews", {
+    const response = await fetch("https://apiiit.vercel.app/addnews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,10 +21,6 @@ export default function AddNews() {
         image: e.target["image-url"].value,
       }),
     });
-    if (!response.status.ok) {
-      setToken("");
-      navigate("/login");
-    }
   };
   return (
     <div class="container">

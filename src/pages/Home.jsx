@@ -1,16 +1,14 @@
 import { useTranslation } from "react-i18next";
+import { useSelector, useDispatch } from "react-redux";
+import Slider from "../components/Swiper";
 
 export default function Home() {
   const { t } = useTranslation();
+  const sliders = useSelector((state) => state.slider.data.data);
   return (
     <>
       <section class="slide">
-        <div class="slider_1">
-          <img src="/img/slider1.jpg" alt="Slider" />
-          <div class="descriptions">
-            <h3>{t("home.slider1")}</h3>
-          </div>
-        </div>
+        <Slider />
       </section>
       <section id="news">
         <h2>{t("home.news")}</h2>
