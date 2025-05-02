@@ -4,7 +4,7 @@ import { getImageBase64 } from "../../hooks/toBase64";
 import "../../styles/addSlider.css";
 import useLocalStorage from "../../hooks/useLocalstorage";
 import { useNavigate } from "react-router";
-
+const API = import.meta.env.VITE_API_URL;
 export default function AddSlider() {
   const [token, setToken] = useLocalStorage("auth_token", "");
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ export default function AddSlider() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://apiiit.vercel.app/slider", {
+      const response = await fetch(API + "/slider", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

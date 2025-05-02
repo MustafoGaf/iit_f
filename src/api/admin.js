@@ -1,7 +1,8 @@
+const API = import.meta.env.VITE_API_URL;
 export const addSlider = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch("https://apiiit.vercel.app/refresh", {
+    const response = await fetch(API + "/refresh", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams, useNavigate } from "react-router";
 import useLocalStorage from "../hooks/useLocalstorage";
+const API = import.meta.env.VITE_API_URL;
 export default function Login() {
   const [token, setToken] = useLocalStorage("auth_token", "");
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function Login() {
       console.log("Code submitted:", code);
       // тут отправка кода на сервер
       try {
-        const response = await fetch("https://apiiit.vercel.app/auth", {
+        const response = await fetch(API + "/auth", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -75,7 +76,7 @@ export default function Login() {
     e.preventDefault();
     setRez({});
     try {
-      const response = await fetch("https://apiiit.vercel.app/login", {
+      const response = await fetch(API + "/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

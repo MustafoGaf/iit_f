@@ -1,8 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+const API = import.meta.env.VITE_API_URL;
 
 export const getSliders = createAsyncThunk("sliger/getSlider", async () => {
   try {
-    const response = await fetch("https://apiiit.vercel.app/sliders");
+    const response = await fetch(API + "/sliders");
     const data = await response.json();
     return data;
   } catch (error) {}

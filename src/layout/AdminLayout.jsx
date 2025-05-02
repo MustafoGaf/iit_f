@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { Link, Outlet, useNavigate } from "react-router";
 import useLocalStorage from "../hooks/useLocalstorage";
-
+const API = import.meta.env.VITE_API_URL;
 export default function AdminLayout() {
   const navigate = useNavigate();
   const [token, setToken] = useLocalStorage("auth_token", "");
 
   const refreshToken = async () => {
     try {
-      const response = await fetch("https://apiiit.vercel.app/refresh", {
+      const response = await fetch(API + "/refresh", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

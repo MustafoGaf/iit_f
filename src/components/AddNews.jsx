@@ -1,14 +1,14 @@
 import { use } from "react";
 import useLocalStorage from "../hooks/useLocalstorage";
 import { useNavigate } from "react-router";
-
+const API = import.meta.env.VITE_API_URL;
 export default function AddNews() {
   const [token, setToken] = useLocalStorage("auth_token", "");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://apiiit.vercel.app/addnews", {
+    const response = await fetch(API + "/addnews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
