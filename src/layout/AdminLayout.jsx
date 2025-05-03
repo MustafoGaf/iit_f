@@ -22,7 +22,7 @@ export default function AdminLayout() {
       const data = await response.json();
       if (response.ok) {
         setToken(data.token);
-        console.log(">>>>>>", data);
+        // console.log(">>>>>>", data);
       }
     } catch (error) {
       setToken("");

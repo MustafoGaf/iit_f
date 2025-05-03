@@ -35,14 +35,14 @@ export const sliderSlice = createSlice({
       state.loading = true;
       state.error = false;
     }),
-      builder.addCase(getSliders.rejected, (state) => {
-        state.loading = false;
-        state.error = true;
-      }),
       builder.addCase(getSliders.fulfilled, (state, action) => {
         state.loading = false;
         state.error = false;
         state.data = action.payload;
+      }),
+      builder.addCase(getSliders.rejected, (state) => {
+        state.loading = false;
+        state.error = true;
       });
   },
 });

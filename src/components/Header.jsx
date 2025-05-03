@@ -40,7 +40,7 @@ export default function Header() {
             <img src="/img/facebook.png" alt="fa-facebook" />
           </a>
 
-          <a href="#">{t("header.ahbor")}</a>
+          <a href="#">{t("header.elom")}</a>
           <a href="#">{t("header.tamos")}</a>
           <a href="#">
             <i className="fab fa-facebook"></i>
@@ -84,38 +84,106 @@ export default function Header() {
             {/* <!-- <img src="/img/down.png" alt="down" /> --> */}
             <ul className="ul_li_ul">
               <li>
-                <a href="">{t("header.nav_tarikh")}</a>
+                <Link to="/about/tarih">{t("header.nav_tarikh")}</Link>
               </li>
               <li>
-                <a href="">{t("header.nav_direcs")}</a>
-              </li>
-              <li className="ul_li1">
-                <a href="">{t("header.nav_sokhtor")}</a>
-                <ul className="ul_li_ul1">
-                  <li>
-                    <Link to={"/about/director"}>{t("header.nav_dir")}</Link>
-                  </li>
-                  <li>
-                    <a href="">{t("header.nav_mu_dir")}</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="">{t("header.nav_suro")}</a>
+                <Link to="/about/directors">{t("header.nav_direcs")}</Link>
               </li>
             </ul>
           </li>
-          <li>
-            <a href="#">{t("header.nav_rohbar")}</a>
+          <li className="ul_li">
+            <Link
+              to={"/"}
+              className={pathname.includes("/rohbar") ? "active" : ""}
+            >
+              {t("header.nav_rohbar")}
+            </Link>
+            {/* <!-- <img src="/img/down.png" alt="down" /> --> */}
+            <ul className="ul_li_ul">
+              <li>
+                <Link to={"/rohbar/director"}>{t("header.nav_dir")}</Link>
+              </li>
+              <li>
+                <Link to={"/rohbar/muovin"}>{t("header.nav_mu_dir")}</Link>
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="#">{t("header.nav_ilm")}</a>
+          <li className="ul_li">
+            <Link
+              to={"/"}
+              className={pathname.includes("/ilm") ? "active" : ""}
+            >
+              {t("header.nav_ilm")}
+            </Link>
+            {/* <!-- <img src="/img/down.png" alt="down" /> --> */}
+            <ul className="ul_li_ul">
+              <li>
+                <Link to={"/ilm/loihaho"}>{t("ilm.ilm1")}</Link>
+              </li>
+              <li>
+                <Link to={"/"}>{t("ilm.ilm2")}</Link>
+              </li>
+              <li>
+                <Link to={"/"}>{t("ilm.ilm3")}</Link>
+              </li>
+              <li>
+                <Link to={"/"}>{t("ilm.ilm4")}</Link>
+              </li>
+              <li>
+                <Link to={"/ilm/shuro"}>{t("ilm.ilm5")}</Link>
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="#">{t("header.nav_suba")}</a>
+          <li className="ul_li">
+            <Link
+              to={"/"}
+              className={pathname.includes("/subaho") ? "active" : ""}
+            >
+              {t("header.nav_suba")}
+            </Link>
+            {/* <!-- <img src="/img/down.png" alt="down" /> --> */}
+            <ul className="ul_li_ul ul_li_ul_shuro">
+              <li>
+                <Link to="/">{t("subaho.suba1")}</Link>
+              </li>
+              <li>
+                <Link to="/">{t("subaho.suba2")}</Link>
+              </li>
+
+              <li>
+                <Link to="/">{t("subaho.suba3")}</Link>
+              </li>
+              <li>
+                <Link to="/">{t("subaho.suba4")}</Link>
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="#">{t("header.nav_omuz")}</a>
+          <li className="ul_li">
+            <Link
+              to={"/"}
+              className={pathname.includes("/ozmoishgoh") ? "active" : ""}
+            >
+              {t("header.nav_omuz")}
+            </Link>
+            {/* <!-- <img src="/img/down.png" alt="down" /> --> */}
+            <ul className="ul_li_ul ul_li_ul_shuro ul_li_ul_ozmoish">
+              <li>
+                <Link to="/ozmoishgoh/glitserin">{t("ozmoish.oz1")}</Link>
+              </li>
+              <li>
+                <Link to="/">{t("ozmoish.oz2")}</Link>
+              </li>
+
+              <li>
+                <Link to="/ozmoishgoh/fizika">{t("ozmoish.oz3")}</Link>
+              </li>
+              <li>
+                <Link to="/">{t("ozmoish.oz4")}</Link>
+              </li>
+              <li>
+                <Link to="/ozmoishgoh/nanotech">{t("ozmoish.oz5")}</Link>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#">{t("header.nav_ahbor")}</a>

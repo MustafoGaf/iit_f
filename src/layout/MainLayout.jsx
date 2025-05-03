@@ -6,7 +6,7 @@ export default function MainLayout() {
   return (
     <div>
       <Header />
-      <main class="container">
+      <main className="container">
         <Outlet />
       </main>
       <Footer />

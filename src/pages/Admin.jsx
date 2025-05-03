@@ -10,7 +10,7 @@ export default function Admin() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [token, setToken] = useLocalStorage("auth_token", "");
   const { t } = useTranslation();
-  console.log(token);
+  // console.log(token);
 
   const navigate = useNavigate();
   useEffect(() => {

@@ -23,10 +23,10 @@ export default function AddNews() {
     });
   };
   return (
-    <div class="container">
+    <div className="container">
       <h1>Добавить новость</h1>
-      <form class="news-form" onSubmit={(e) => handleSubmit(e)}>
-        <div class="form-group">
+      <form className="news-form" onSubmit={(e) => handleSubmit(e)}>
+        <div className="form-group">
           <label for="title">Заголовок новости</label>
           <input
             type="text"
@@ -37,7 +37,7 @@ export default function AddNews() {
           />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="description">Описание новости</label>
           <textarea
             id="description"
@@ -48,12 +48,12 @@ export default function AddNews() {
           ></textarea>
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="date">Дата</label>
           <input type="date" id="date" name="date" required />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="image-url">Ссылка на изображение</label>
           <input
             type="url"
@@ -64,7 +64,7 @@ export default function AddNews() {
           />
         </div>
 
-        <button type="submit" class="submit-btn">
+        <button type="submit" className="submit-btn">
           Добавить новость
         </button>
       </form>

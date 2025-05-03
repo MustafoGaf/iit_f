@@ -16,9 +16,7 @@ import useLocalStorage from "../hooks/useLocalstorage";
 export default function Slider() {
   const { t } = useTranslation();
   const sliders = useSelector((state) => state.slider.data.data);
-  useEffect(() => {
-    console.log("reload");
-  }, [localStorage.getItem("language")]);
+  useEffect(() => {}, [localStorage.getItem("language")]);
   return (
     <>
       <Swiper
@@ -38,9 +36,9 @@ export default function Slider() {
         {sliders.length ? (
           sliders.map((slider) => (
             <SwiperSlide>
-              <div class="slider_1">
+              <div className="slider_1">
                 <img src={slider.image} alt="Slider" />
-                <div class="descriptions">
+                <div className="descriptions">
                   <h3>{slider["title_" + localStorage.getItem("language")]}</h3>
                 </div>
               </div>
@@ -48,9 +46,9 @@ export default function Slider() {
           ))
         ) : (
           <SwiperSlide>
-            <div class="slider_1">
+            <div className="slider_1">
               <img src="/img/slider1.jpg" alt="Slider" />
-              <div class="descriptions">
+              <div className="descriptions">
                 <h3>{t("home.slider1")}</h3>
               </div>
             </div>
@@ -58,9 +56,9 @@ export default function Slider() {
         )}
         {/* <SwiperSlide>
           {" "}
-          <div class="slider_1">
+          <div className="slider_1">
             <img src="/img/slider1.jpg" alt="Slider" />
-            <div class="descriptions">
+            <div className="descriptions">
               <h3>{t("home.slider1")}</h3>
             </div>
           </div>

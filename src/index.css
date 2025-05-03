@@ -157,6 +157,10 @@ ul li:hover > .ul_li_ul {
   color: white;
 }
 
+ul li ul li a {
+  text-transform: none !important;
+}
+
 .ul_li1 {
   position: relative;
 }
@@ -171,7 +175,20 @@ ul li:hover > .ul_li_ul {
 ul li:hover > .ul_li_ul1 {
   display: block;
 }
-
+/* for Shuro */
+.ul_li_ul_shuro {
+  width: 500px;
+}
+.ul_li_ul_shuro a {
+  white-space: pre-line;
+  margin: 0;
+  /* padding-left: 20px; */
+}
+.ul_li_ul_ozmoish {
+  right: 0px !important;
+  left: auto;
+  width: 370px !important;
+}
 .active {
   border-bottom: 3px solid rgb(102 102 76);
 }
@@ -364,6 +381,9 @@ footer img {
   display: flex;
 
 } */
+.director_div {
+  margin-top: 20px;
+}
 
 .dir_info {
   display: flex;
@@ -379,10 +399,14 @@ footer img {
 .dir_img img {
   width: 225px;
 }
+.muo_img {
+  width: 168px;
+  object-fit: scale-down;
+}
 
 .dir_name {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  /* text-align: center; */
+  text-align: left;
 }
 
 .dir_step {
@@ -393,7 +417,7 @@ footer img {
   font-family: math;
   font-size: 20px;
   line-height: 1.74;
-  padding: 10px 10px;
+  padding: 10px 0px;
   text-align: justify;
 }
 /* конец страница директора */
@@ -477,7 +501,7 @@ footer img {
 /* SMS */
 
 .sms-container {
-  width: 350px;
+  width: 400px;
   margin: 80px auto;
   background: #ecf0f3;
   padding: 40px;
@@ -673,4 +697,57 @@ footer img {
 .add-button:active {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.div_printer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.printer {
+  width: 801px;
+  height: 400px;
+  object-fit: scale-down;
+}
+.text_img {
+  .image {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  .text_img {
+    overflow: hidden;
+    margin-top: 10px; /* чтобы контейнер обернул float */
+  }
+  .image1 {
+    width: 266px;
+    height: 200px;
+    object-fit: none;
+  }
+
+  .float-box {
+    float: left;
+    width: 266px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .float-box img {
+    width: 100%;
+
+    display: block;
+    height: 200px;
+    object-fit: contain;
+  }
+  .caption {
+    font-size: 19px;
+    color: #555;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+}
+.mt {
+  margin-top: 10px;
 }

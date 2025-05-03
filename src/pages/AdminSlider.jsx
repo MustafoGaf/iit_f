@@ -26,7 +26,6 @@ export default function AdminSlider() {
 
       const data = await response.json();
       if (response.ok) {
-        console.log(">>>>>>", data, response.status);
         dispatch(getSliders());
       }
     } catch (error) {
@@ -41,9 +40,9 @@ export default function AdminSlider() {
     return (
       <>
         {openAdd && <AddSlider />}
-        <div class="container_add">
+        <div className="container_add">
           <button
-            class="add-button"
+            className="add-button"
             title="Добавить новость"
             onClick={() => setOpen(true)}
           >
@@ -58,10 +57,10 @@ export default function AdminSlider() {
     <>
       {sliders.map((slider) => (
         <>
-          <section class="slide" key={slider.id}>
-            <div class="slider_1">
+          <section className="slide" key={slider.id}>
+            <div className="slider_1">
               <img src={slider.image} alt="Slider" />
-              <div class="descriptions">
+              <div className="descriptions">
                 <h3>{slider["title_" + language]}</h3>
               </div>
             </div>
@@ -78,9 +77,9 @@ export default function AdminSlider() {
           </section>
         </>
       ))}
-      <div class="container_add">
+      <div className="container_add">
         <button
-          class="add-button"
+          className="add-button"
           title="Добавить новость"
           onClick={() => setOpenAdd(!openAdd)}
         >

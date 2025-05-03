@@ -43,7 +43,7 @@ export default function Login() {
     } else {
       e.preventDefault();
       const code = inputsRef.current.map((input) => input.value).join("");
-      console.log("Code submitted:", code);
+      // console.log("Code submitted:", code);
       // тут отправка кода на сервер
       try {
         const response = await fetch(API + "/auth", {
@@ -88,13 +88,13 @@ export default function Login() {
       });
 
       const data = await response.json();
-      console.log("data = ", data);
+      // console.log("data = ", data);
       setRez({
         code: String(data.code) || 0,
         message: String(data.message) || "",
         status: String(data.status) || 200,
       });
-      console.log(rez);
+      // console.log(rez);
       if (data.code) {
         setSerachParams({
           code: String(data.code),

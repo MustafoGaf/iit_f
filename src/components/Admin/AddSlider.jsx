@@ -41,7 +41,7 @@ export default function AddSlider() {
 
       const data = await response.json();
       if (response.ok) {
-        console.log(">>>>>>", data, response.status);
+        // console.log(">>>>>>", data, response.status);
       }
     } catch (error) {
       if (response.status == 403) {
@@ -53,15 +53,15 @@ export default function AddSlider() {
   };
 
   return (
-    <div class="container_add_slider">
+    <div className="container_add_slider">
       <h1>Добавить новость</h1>
       <form id="newsForm" onSubmit={(e) => addSliderFetch(e)}>
-        <div class="form-group">
+        <div className="form-group">
           <label for="url">Ссылка на новость</label>
           <input type="url" id="url" name="link" required />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="image">Изображение</label>
           <input
             type="file"
@@ -87,22 +87,22 @@ export default function AddSlider() {
           </div>
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="description-ru">Описание на русском</label>
           <textarea id="description-ru" name="title_ru" required></textarea>
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="title_en">Description in English</label>
           <textarea id="description-en" name="title_en" required></textarea>
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="description-tj">Тавсифи ба тоҷикӣ</label>
           <textarea id="description-tj" name="title_tj" required></textarea>
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="number">Порядковый номер</label>
           <input
             type="number"

@@ -1,17 +1,18 @@
 {
   "header": {
+    "elom": "Announcements",
     "ahbor": "News",
-    "tamos": "Contact us",
+    "tamos": "Contact Us",
     "name_iit": "Scientific Research Institute",
     "tnu": "Tajik National University",
     "nav_asos": "HOME",
-    "nav_about": "ABOUT US",
-    "nav_tarikh": "History of IIT",
-    "nav_direcs": "Directors of IIT",
+    "nav_about": "About",
+    "nav_tarikh": "Institute History",
+    "nav_direcs": "Institute Directors",
     "nav_sokhtor": "Structure",
     "nav_dir": "Director",
     "nav_mu_dir": "Deputy Director",
-    "nav_suro": "Scientific Council",
+    "nav_suro": "Academic Council",
     "nav_rohbar": "LEADERSHIP",
     "nav_ilm": "SCIENCE",
     "nav_suba": "DEPARTMENTS",
@@ -19,13 +20,33 @@
     "nav_ahbor": "NEWS"
   },
   "home": {
-    "slider1": "TNU PROFESSORS WON 3 MEDALS AT THE MIDDLE EAST INVENTORS FORUM",
+    "slider1": "TNU PROFESSORS WON 3 MEDALS AT THE MIDDLE EAST INVENTORS' FORUM",
     "news": "NEWS",
-    "title_news": "GRAND CELEBRATION OF THE ARMED FORCES DAY AT TNU",
-    "text_news": "Today (21.02.2025), a scientific and cultural event was held at the Tajik National University in honor of the 32nd anniversary of the establishment of the Armed Forces of the Republic of Tajikistan."
+    "title_news": "GRAND CELEBRATION OF THE ARMED FORCES FOUNDATION ANNIVERSARY AT TNU",
+    "text_news": "Today (21.02.2025), on the occasion of the 32nd anniversary of the establishment of the Armed Forces of the Republic of Tajikistan, a scientific and cultural event was held at the Tajik National University."
   },
   "footer": {
-    "o_nas": "About us",
-    "desc": "Tajik National University is the first and one of the largest universities in Tajikistan, and a major center for culture, education, and science. Founded in 1948, it is located in the capital city, Dushanbe. The rector is Professor Nasriddinzoda E. S."
+    "o_nas": "About Us",
+    "desc": "The Tajik National University is the first and one of the largest universities in the country, considered a center for the development of culture, education, and science. Founded in 1948, it is located in the capital — Dushanbe. The rector is Professor Nasriddinzoda E. S."
+  },
+  "subaho": {
+    "suba1": "Department of Natural, Pharmaceutical, Exact, and Mathematical Sciences",
+    "suba2": "Accounting and Planning Department",
+    "suba3": "Department of Humanities, Social and Economic Sciences",
+    "suba4": "Department of Law and Human Resources"
+  },
+  "ozmoish": {
+    "oz1": "Glycerin Chemistry",
+    "oz2": "Synthesis and Testing of Coordination Compounds",
+    "oz3": "Physics of Condensed Matter",
+    "oz4": "Chemistry and Technology of Medicinal Plants",
+    "oz5": "Analytical and Diagnostic Center — Nanotechnology"
+  },
+  "ilm": {
+    "ilm1": "Projects",
+    "ilm2": "Conferences",
+    "ilm3": "Books",
+    "ilm4": "Articles",
+    "ilm5": "Academic Council"
   }
 }
