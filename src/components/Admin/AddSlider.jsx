@@ -4,10 +4,17 @@ import { getImageBase64 } from "../../hooks/toBase64";
 import "../../styles/addSlider.css";
 import useLocalStorage from "../../hooks/useLocalstorage";
 import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { getSliders } from "../../api/sliders";
+import Loading from "../Loading";
+
 const API = import.meta.env.VITE_API_URL;
-export default function AddSlider() {
+export default function AddSlider({ onClose }) {
   const [token, setToken] = useLocalStorage("auth_token", "");
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const dispatch = useDispatch();
   const [imageBase64, setImageBase64] = useState("");
   const handleImageUpload = (event) => {
     const file = event.target.files[0]; // Получаем выбранный файл
@@ -21,7 +28,7 @@ export default function AddSlider() {
   };
   const addSliderFetch = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const response = await fetch(API + "/slider", {
         method: "POST",
@@ -40,10 +47,14 @@ export default function AddSlider() {
       });
 
       const data = await response.json();
+      setLoading(false);
+      onClose();
       if (response.ok) {
-        // console.log(">>>>>>", data, response.status);
+        dispatch(getSliders());
       }
     } catch (error) {
+      setLoading(false);
+      onClose();
       if (response.status == 403) {
         setToken("");
         navigate("/login");
@@ -54,6 +65,8 @@ export default function AddSlider() {
 
   return (
     <div className="container_add_slider">
+      {loading && <Loading />}
+
       <h1>Добавить новость</h1>
       <form id="newsForm" onSubmit={(e) => addSliderFetch(e)}>
         <div className="form-group">

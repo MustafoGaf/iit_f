@@ -48,7 +48,8 @@
   }
 
   textarea {
-    height: 80px;
+    height: 110px;
+    width: 300px;
     resize: none;
   }
 

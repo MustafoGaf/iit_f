@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  overflow: auto;
 }
 
 .modal-content {
@@ -16,9 +17,10 @@
   padding: 2rem;
   border-radius: 10px;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 768px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
   position: relative;
+  height: 500px;
 }
 
 .modal-close {

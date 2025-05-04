@@ -5,6 +5,10 @@
   position: absolute;
   top: 20px;
   right: 50px;
+  display: flex;
+  gap: 10px;
+}
+.edit_slider div {
   background-color: #9d989869;
   border-radius: 50%;
   padding: 10px;
@@ -14,6 +18,6 @@
   width: 50px;
   height: 50px;
 }
-.edit_slider:hover {
+.edit_slider div:hover {
   background-color: #a3a3a3;
 }

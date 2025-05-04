@@ -8,7 +8,7 @@ import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getSliders } from "./api/sliders";
+import { getNews, getSliders } from "./api/sliders";
 import AdminSlider from "./pages/AdminSlider";
 import Muovin from "./pages/Muovin";
 import NanoTech from "./pages/NanoTech";
@@ -18,11 +18,13 @@ import Directors from "./pages/Directors";
 import ShuroiOlimon from "./pages/ShuroiOlimon";
 import Loihaho from "./pages/Loihaho";
 import Istoriya from "./pages/Istoriya";
+import AdminNews from "./pages/AdminNews";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSliders());
+    dispatch(getNews());
   }, []);
   return (
     <BrowserRouter>
@@ -55,6 +57,7 @@ function App() {
         <Route path="/admin/" element={<AdminLayout />}>
           <Route index element={<Admin />} />
           <Route path="slider" element={<AdminSlider />} />
+          <Route path="news" element={<AdminNews />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -35,6 +35,10 @@ export default function AdminLayout() {
     }
     refreshToken();
   }, []);
+  function logout() {
+    setToken("");
+    navigate("/");
+  }
   return (
     <div className="admin_container">
       <nav className="admin-navbar">
@@ -50,9 +54,9 @@ export default function AdminLayout() {
             </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/admin/news">
               <i className="fas fa-chart-bar"></i> Новости
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#">
@@ -66,9 +70,9 @@ export default function AdminLayout() {
           </li>
 
           <li>
-            <a href="#">
+            <p onClick={() => logout()}>
               <i className="fas fa-sign-out-alt"></i> Выйти
-            </a>
+            </p>
           </li>
         </ul>
       </nav>
