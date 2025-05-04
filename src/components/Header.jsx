@@ -56,7 +56,7 @@ export default function Header() {
         </div>
         <div className="site_name">
           <h1 className="name_iit">{t("header.name_iit")}</h1>
-          <p>{t("header.tnu")}</p>
+          <p className="name_iit">{t("header.tnu")}</p>
         </div>
         <div>
           <div className="logo_div logo_iit">
