@@ -93,7 +93,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   margin: 0 25px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3sease;
@@ -297,6 +297,13 @@ footer {
   color: #eaeaea;
   margin-top: 20px;
   padding: 20px 0;
+}
+
+.footer_o_nas h1 {
+  text-align: left;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 
 footer .footer_block {
@@ -823,4 +830,31 @@ footer img {
   .slider_1 img {
     height: 310px !important;
   }
+}
+.black_text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 35px;
+  border-bottom: 3px solid black;
+}
+.black_text h2 {
+  background-color: black;
+  color: white;
+  width: 250px;
+  text-align: center;
+  padding: 5px 10px 0 10px;
+}
+.mufid {
+  background-color: #f1f1f1;
+  padding: 4px 10px 4px 10px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 24px;
+  overflow-x: scroll;
+}
+
+.mufid_list {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
 }

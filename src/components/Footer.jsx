@@ -12,7 +12,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer_text">
-          <h1>{t("footer.o_nas")}</h1>
+          <div className="footer_o_nas">
+            <h1>{t("footer.o_nas")}</h1>
+          </div>
           <p>{t("footer.desc")}</p>
           <Link to={"/admin"} style={{ "text-decoration": "none" }}>
             <p style={{ color: "#212121" }}>Душанбе 2025</p>

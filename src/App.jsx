@@ -19,6 +19,8 @@ import ShuroiOlimon from "./pages/ShuroiOlimon";
 import Loihaho from "./pages/Loihaho";
 import Istoriya from "./pages/Istoriya";
 import AdminNews from "./pages/AdminNews";
+import Confrensiya from "./pages/Confrensiya";
+import Muhosibot from "./pages/Muhosibot";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +44,7 @@ function App() {
           <Route index element={<About />} />
           <Route path="shuro" element={<ShuroiOlimon />} />
           <Route path="loihaho" element={<Loihaho />} />
+          <Route path="confrensiyaho" element={<Confrensiya />} />
         </Route>
         <Route path="/rohbar/" element={<MainLayout />}>
           <Route index element={<About />} />
@@ -53,6 +56,9 @@ function App() {
           <Route path="nanotech" element={<NanoTech />} />
           <Route path="fizika" element={<Fizika />} />
           <Route path="glitserin" element={<HimiyaGlitserin />} />
+        </Route>
+        <Route path="/shubaho/" element={<MainLayout />}>
+          <Route path="muhosibot" element={<Muhosibot />} />
         </Route>
         <Route path="/admin/" element={<AdminLayout />}>
           <Route index element={<Admin />} />

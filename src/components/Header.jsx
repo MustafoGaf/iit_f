@@ -42,7 +42,7 @@ export default function Header() {
 
           <a href="#">{t("header.elom")}</a>
           <a href="#">{t("header.tamos")}</a>
-          <a href="#">
+          <a href="https://www.facebook.com/groups/4324993637511694/?ref=share&mibextid=NSMWBT">
             <i className="fab fa-facebook"></i>
           </a>
           <a href="#">
@@ -121,7 +121,7 @@ export default function Header() {
                 <Link to={"/ilm/loihaho"}>{t("ilm.ilm1")}</Link>
               </li>
               <li>
-                <Link to={"/"}>{t("ilm.ilm2")}</Link>
+                <Link to={"/ilm/confrensiyaho"}>{t("ilm.ilm2")}</Link>
               </li>
               <li>
                 <Link to={"/"}>{t("ilm.ilm3")}</Link>
@@ -137,7 +137,7 @@ export default function Header() {
           <li className="ul_li">
             <Link
               to={"/"}
-              className={pathname.includes("/subaho") ? "active" : ""}
+              className={pathname.includes("/shubaho") ? "active" : ""}
             >
               {t("header.nav_suba")}
             </Link>
@@ -147,7 +147,7 @@ export default function Header() {
                 <Link to="/">{t("subaho.suba1")}</Link>
               </li>
               <li>
-                <Link to="/">{t("subaho.suba2")}</Link>
+                <Link to="/shubaho/muhosibot">{t("subaho.suba2")}</Link>
               </li>
 
               <li>
