@@ -4,7 +4,7 @@ export default function Muovin() {
       <div className="text_img mt-10">
         <div className="float-box">
           <img
-            src="/img/ustod2.jpg"
+            src="/img/ustod2.jpeg"
             className="muo_img image image1"
             alt="Изображение"
           />

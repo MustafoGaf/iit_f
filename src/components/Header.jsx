@@ -36,13 +36,16 @@ export default function Header() {
           />
         </div>
         <div className="contacts">
-          <a href="#" className="a_facebook">
+          <a
+            href="https://www.facebook.com/groups/4324993637511694/?ref=share&mibextid=NSMWBT"
+            className="a_facebook"
+          >
             <img src="/img/facebook.png" alt="fa-facebook" />
           </a>
 
           <a href="#">{t("header.elom")}</a>
           <a href="#">{t("header.tamos")}</a>
-          <a href="https://www.facebook.com/groups/4324993637511694/?ref=share&mibextid=NSMWBT">
+          <a href="#">
             <i className="fab fa-facebook"></i>
           </a>
           <a href="#">
@@ -96,15 +99,41 @@ export default function Header() {
               to={"/"}
               className={pathname.includes("/rohbar") ? "active" : ""}
             >
-              {t("header.nav_rohbar")}
+              {t("header.nav_sokhtor")}
             </Link>
             {/* <!-- <img src="/img/down.png" alt="down" /> --> */}
             <ul className="ul_li_ul">
-              <li>
-                <Link to={"/rohbar/director"}>{t("header.nav_dir")}</Link>
+              <li className="ul_li1">
+                <a href="">{t("header.nav_rohbar")}</a>
+                <ul className="ul_li_ul1">
+                  <li>
+                    <Link to={"/rohbar/director"}>{t("header.nav_dir")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/rohbar/muovin"}>{t("header.nav_mu_dir")}</Link>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <Link to={"/rohbar/muovin"}>{t("header.nav_mu_dir")}</Link>
+              <li className="ul_li1 ">
+                <a href="">{t("header.nav_suba")}</a>
+                <ul
+                  className="ul_li_ul1 ul_li_ul_shuro"
+                  style={{ width: "420px" }}
+                >
+                  <li>
+                    <Link to="/">{t("subaho.suba1")}</Link>
+                  </li>
+                  <li>
+                    <Link to="/shubaho/muhosibot">{t("subaho.suba2")}</Link>
+                  </li>
+
+                  <li>
+                    <Link to="/">{t("subaho.suba3")}</Link>
+                  </li>
+                  <li>
+                    <Link to="/">{t("subaho.suba4")}</Link>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
@@ -130,34 +159,14 @@ export default function Header() {
                 <Link to={"/"}>{t("ilm.ilm4")}</Link>
               </li>
               <li>
+                <Link to={"/"}>{t("ilm.ilm41")}</Link>
+              </li>
+              <li>
                 <Link to={"/ilm/shuro"}>{t("ilm.ilm5")}</Link>
               </li>
             </ul>
           </li>
-          <li className="ul_li">
-            <Link
-              to={"/"}
-              className={pathname.includes("/shubaho") ? "active" : ""}
-            >
-              {t("header.nav_suba")}
-            </Link>
-            {/* <!-- <img src="/img/down.png" alt="down" /> --> */}
-            <ul className="ul_li_ul ul_li_ul_shuro">
-              <li>
-                <Link to="/">{t("subaho.suba1")}</Link>
-              </li>
-              <li>
-                <Link to="/shubaho/muhosibot">{t("subaho.suba2")}</Link>
-              </li>
 
-              <li>
-                <Link to="/">{t("subaho.suba3")}</Link>
-              </li>
-              <li>
-                <Link to="/">{t("subaho.suba4")}</Link>
-              </li>
-            </ul>
-          </li>
           <li className="ul_li">
             <Link
               to={"/"}
@@ -185,6 +194,7 @@ export default function Header() {
               </li>
             </ul>
           </li>
+
           <li>
             <a href="#">{t("header.nav_ahbor")}</a>
           </li>

@@ -44,10 +44,11 @@
     "oz5": "Analytical and Diagnostic Center — Nanotechnology"
   },
   "ilm": {
-    "ilm1": "Projects",
+    "ilm1": "Scientific projects",
     "ilm2": "Conferences",
-    "ilm3": "Books",
-    "ilm4": "Articles",
-    "ilm5": "Academic Council"
+    "ilm3": "Publications",
+    "ilm4": "Scientific cooperation",
+    "ilm41": "Patents",
+    "ilm5": "Academic council"
   }
 }
