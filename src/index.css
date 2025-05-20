@@ -335,10 +335,43 @@ footer img {
 .d_block {
   display: block !important;
 }
+.d_none {
+  display: none !important;
+}
+.nav_active {
+  display: block;
+}
+.contact_nav {
+  display: none;
+}
+.facebook_section {
+  display: none;
+}
+.nav_down {
+  display: none;
+}
+.nav_list_m {
+  display: none;
+}
+.div_a_down {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .nav_list_m {
+    display: none !important;
+  }
+}
 
 @media (max-width: 900px) {
   .burger {
     display: block;
+  }
+  .nav_list {
+    display: none !important;
   }
   .logo_tnu {
     display: none;
@@ -390,10 +423,48 @@ footer img {
   .footer_text {
     padding: 15px;
   }
+  .ul_li {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .nav_down {
+    display: block;
+  }
+  .active_ul {
+    display: block;
+  }
+  .res1 {
+    transform: rotate(180deg);
+  }
+  .res2 {
+    transform: rotate(0deg);
+  }
+  .ul_li_ul {
+    width: 100% !important;
+    position: unset !important;
+  }
+  .ul_li_ul1 {
+    width: 100% !important;
+    position: unset !important;
+    background-color: #167e7ee0;
+  }
 }
 @media (max-width: 460px) {
   .contacts {
     display: none;
+  }
+  .contact_nav {
+    display: block;
+  }
+  .facebook_section {
+    display: block;
+  }
+  .facebook_section img {
+    width: 30px;
+    height: 30px;
   }
 }
 /* начало страница директора */
